@@ -9,10 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var clicked = 0
+    
+    @IBOutlet weak var label1: UILabel!
+    
+    @IBAction func button1(_ sender: UIButton) {
+        
+        clicked = clicked + 1
+        
+        if clicked >= 10 {
+        view.backgroundColor = UIColor.blue
+        label1.text = "Todd is Cool"
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
